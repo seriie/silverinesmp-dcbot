@@ -21,11 +21,11 @@ export default {
 
             if (!payload.online) {
                 const offlineEmbed = new EmbedBuilder()
-                    .setTitle("Minerva SMP - Server Status")
+                    .setTitle(`${serverIp.split(".")[0]} - Server Status`)
                     .setColor("#EF4444") // Red
                     .setDescription("🔴 **Server is currently Offline**")
                     .setTimestamp()
-                    .setFooter({ text: "Minerva SMP" });
+                    .setFooter({ text: `${serverIp.split(".")[0]}` });
                 
                 return await interaction.editReply({ embeds: [offlineEmbed] });
             }

@@ -2,7 +2,7 @@ import { EmbedBuilder } from "discord.js";
 
 export async function getAllPlayers(client) {
     const playerListChannelId = process.env.DISCORD_PLAYER_LIST_CHANNEL_ID;
-    const serverIp = process.env.MINECRAFT_SERVER_IP || "minervasmp.raznar.net:25080";
+    const serverIp = process.env.MINECRAFT_SERVER_IP;
     const url = `https://api.mcsrvstat.us/3/${serverIp}`;
 
     const channel = await client.channels.fetch(playerListChannelId).catch(() => null);
